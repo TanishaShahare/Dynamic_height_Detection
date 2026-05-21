@@ -1,0 +1,16 @@
+Note:
+To test camera auto-recalibration (for correct dynamic pixel-to-millimeter conversion), a known object and a known camera distance are required.
+
+In this project, the known object is a checkerboard pattern placed in front of the camera.
+The checkerboard is used to calculate the live scale between pixels and millimeters.
+
+Checkerboard specification used in the project:
+- Pattern size: 9 x 6 internal corners
+- Square size: 5.0 mm (default)
+- Detection method: OpenCV checkerboard corner detection
+
+Instructions:
+1. Place the checkerboard pattern flat and fully visible in the camera view.
+2. Use the calibration controls to ensure the square size matches the actual checkerboard square dimension.
+3. Allow the app to detect the board and compute the pixel-to-mm scale automatically.
+4. Once detected, the measurement system will use the live calibrated scale for object dimensions.
